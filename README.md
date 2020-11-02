@@ -10,4 +10,4 @@ Test-1 is from the same orbits as training data, with known maneuvers;
 Test-2 is from different orbits but the same database as training data, with known maneuvers;
 Test-3 is from unknwon database, with unknown maneuvers.
 
-After pre-processing the data, run "BuildGP" for training and prediction.
+After pre-processing the data, run "BuildGP" for training and prediction. 

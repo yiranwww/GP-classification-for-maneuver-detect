@@ -21,8 +21,11 @@ Here we set the training size as 10 in the example code for a quick training. If
 Finally run "Predict" to predict the results with trained model. The final result is saved at "PredictedResult.mat".
 In the example we set the uncertainty boundary of the prediction follows the "3-sigma" theorem to obtain the lower and higher boundaries.
 
+To analysis the results, we obtain the valid prediction with label -1 in variables "test_i_pred_0_valid", i here is 1/2/3 for Test-1, Test-2 and Test-3. Similarly， the valid prediction with label 1 are obtained in variables "test_i_pred_1_valid".
+We also account the number of the cases that is valid but out of the boundaries in variables "test_i_pred_valid_outBoundary" and the invalid case but out of the boundary in variables "test_i_invalid_outBoundary".
+
 In the example code, we plot the overall results of Test-2 and Test-3. You can zoom in for more details.
 To look at those conditions the truth point is out of the boundaries, we account the the index of the points in variables "error_1" and "error_2" for Test-1, "error_3" and "error_4" for Test-2, and "error_5" and "error_6" for Test-3. You can refer this with the plot. 
-In the example code We plot an invalid prediction but out of the boundary in Test-3.
+In the example code We plot an invalid prediction but out of the boundary in Test-3 and saved as "Test-3：InvalidPredictionbutoutofBoundary.png".
 
 

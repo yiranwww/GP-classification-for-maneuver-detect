@@ -10,11 +10,9 @@ Please keep the "CollectData.m", "BuildGP.m" and "Predict.m" files in the **same
 You can also set your own data path and gpml path.
 
 First run "CollectData" to pre-process the data. There are three test data in this code: 
-  - 文本1
-  - 文本2
--*Test-1* is from the same orbits as training data, with known maneuvers;
--*Test-2* is from different orbits but the same database as training data, with known maneuvers;
--*Test-3* is from unknwon database, with unknown maneuvers.
+  -*Test-1* is from the same orbits as training data, with known maneuvers;
+  -*Test-2* is from different orbits but the same database as training data, with known maneuvers;
+  -*Test-3* is from unknwon database, with unknown maneuvers.
 
 In the example code, we define the training code is from orbit 1 to orbit 5 with maneuver magnitude as 3/5/10 m/s.
 

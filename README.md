@@ -10,9 +10,13 @@ Please keep the "CollectData.m", "BuildGP.m" and "Predict.m" files in the same f
 You can also set your own data path and gpml path.
 
 First run "CollectData" to pre-process the data. There are three test data in this code: 
+
 Test-1 is from the same orbits as training data, with known maneuvers;
+
 Test-2 is from different orbits but the same database as training data, with known maneuvers;
+
 Test-3 is from unknwon database, with unknown maneuvers.
+
 In the example code, we define the training code is from orbit 1 to orbit 5 with maneuver magnitude as 3/5/10 m/s.
 
 After pre-processing the data, run "BuildGP" to training the model. The trained model and other informations are saved at "GP_model.mat".
@@ -23,7 +27,7 @@ In this example we define the judgement of the valid as {-0.5, 0.5}. If the pred
 You can also set your own judgement boundaries at the begining of the code.
 
 In the example we set the uncertainty boundary of the prediction follows the "3-sigma" theorem to obtain the lower and higher boundaries.
-To analysis the results, we obtain the valid prediction with label -1 in variables "test_i_pred_0_valid", i here is 1/2/3 for Test-1, Test-2 and Test-3. Similarly， the valid prediction with label 1 are obtained in variables "test_i_pred_1_valid".
+To analysis the results, we obtain the valid prediction with label -1 in variables "test_i_pred_0_valid", i here is 1/2/3 for Test-1, Test-2 and Test-3. Similarly, the valid prediction with label 1 are obtained in variables "test_i_pred_1_valid".
 We also account the number of the cases that is valid but out of the boundaries in variables "test_i_pred_valid_outBoundary" and the invalid case but out of the boundary in variables "test_i_invalid_outBoundary".
 
 In the example code, we plot the overall results of Test-2 and Test-3. You can zoom in for more details.

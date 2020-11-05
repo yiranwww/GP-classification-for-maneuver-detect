@@ -6,7 +6,7 @@ The Gaussian Process toolbox based on MATLAB is from "gpml-3.1" by Carl Edward R
 The database is simulated by Orekit (https://www.orekit.org/) in Java. The code is accomplished by Dr. Hao Peng. 
 Here we provide some database with different maneuvers in "DataCollectionFile-maneuver_database".
 
-Please keep the "CollectData.m", "BuildGP.m" and "Predict.m" files in the same folder as "DataCollectionFile" to keep the data path workable. 
+Please keep the "CollectData.m", "BuildGP.m" and "Predict.m" files in the *same folder* as "DataCollectionFile" to keep the data path workable. 
 You can also set your own data path and gpml path.
 
 First run "CollectData" to pre-process the data. There are three test data in this code: 
@@ -16,7 +16,7 @@ Test-3 is from unknwon database, with unknown maneuvers.
 
 In the example code, we define the training code is from orbit 1 to orbit 5 with maneuver magnitude as 3/5/10 m/s.
 
-After pre-processing the data, run '''BuildGP``` to training the model. The trained model and other informations are saved at "GP_model.mat".
+After pre-processing the data, run "BuildGP" to training the model. The trained model and other informations are saved at "GP_model.mat".
 Here we set the training size as 10 in the example code for a quick training. If you want to have a higer accuracy, you can increase it.
 
 Finally run "Predict" to predict the results with trained model. The final result is saved at "PredictedResult.mat".

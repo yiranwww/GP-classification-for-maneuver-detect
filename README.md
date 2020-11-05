@@ -19,8 +19,10 @@ After pre-processing the data, run "BuildGP" to training the model. The trained 
 Here we set the training size as 10 in the example code for a quick training. If you want to have a higer accuracy, you can increase it.
 
 Finally run "Predict" to predict the results with trained model. The final result is saved at "PredictedResult.mat".
-In the example we set the uncertainty boundary of the prediction follows the "3-sigma" theorem to obtain the lower and higher boundaries.
+In this example we define the judgement of the valid as {-0.5, 0.5}. If the predicted output is greater than 0.5, we assign its predicted value as 1; if the predicted output is less than -0.5, we assign its value as 1. The correct predictions are the cases that the predicted values agree with their corresponding labels. Counting the total number of the correctly classified data the dividing by the total test data size, we calculate the accuracy.
+You can also set your own judgement boundaries at the begining of the code.
 
+In the example we set the uncertainty boundary of the prediction follows the "3-sigma" theorem to obtain the lower and higher boundaries.
 To analysis the results, we obtain the valid prediction with label -1 in variables "test_i_pred_0_valid", i here is 1/2/3 for Test-1, Test-2 and Test-3. Similarly， the valid prediction with label 1 are obtained in variables "test_i_pred_1_valid".
 We also account the number of the cases that is valid but out of the boundaries in variables "test_i_pred_valid_outBoundary" and the invalid case but out of the boundary in variables "test_i_invalid_outBoundary".
 

@@ -35,7 +35,7 @@ We also calculate the confusion matrix for each Test data and saved in "test_i_P
 
 In the example code, we plot the overall results of the Test data. You can zoom in for more details.  
 To look at those conditions the truth point is out of the boundaries, we account the the index of the points in variables *"error_1"* and *"error_2"* for Test-1 with its higher boundary and lower boundary, *"error_3"* and *"error_4"* for the corresponding boundaries of Test-2, and *"error_5"* and *"error_6"* for Test-3. You can refer this with the plot.     
-In the example code We plot an invalid prediction but out of the boundary in Test-3 and saved as "Test-3：InvalidPredictionbutoutofBoundary.png".
+In the example code We plot an invalid prediction but out of the boundary in Test-3 and saved as "Test-3：InvalidPredictionbutoutofBoundary.png". 
 
 
 

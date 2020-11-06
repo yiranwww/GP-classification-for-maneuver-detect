@@ -18,6 +18,7 @@ First run "CollectData.m" to pre-process the data. There are three test data in 
 *Test-3* is from the unknown maneuver database.
 
 In the example code, we define the training code is from orbit 1 to orbit 5 with maneuver magnitudes as 3/5/10 m/s.
+The users can define different maneuver magnitudes for training, but note that the maneuver magnitude in the provided database is only from 1 m/s to 10 m/s.
 
 ### 2. Build the GP model
 After pre-processing the data, run "BuildGP.m" to train the model. The trained model and other information are saved at "GP_model.mat".  

@@ -21,15 +21,15 @@ In the example code, we define the training code is from orbit 1 to orbit 5 with
 The users can define different maneuver magnitudes for training, but note that the maneuver magnitude in the provided database is only from 1 m/s to 10 m/s.
 
 ### 2. Build the GP model
-After pre-processing the data, run "BuildGP.m" to train the model. The trained model and other information are saved at "GP_model.mat".  
-Note the training step size as **10** in the example code for quick training. For higher accuracy, increase "trainingsteps".
+After pre-processing the data, run *"BuildGP.m"* to train the model. The trained model and other information are saved at *"GP_model.mat"*.  
+Note the training step size as **10** in the example code for quick training. For higher accuracy, increase *"trainingsteps"*.
 
 ### 3. Prediction Results
-Finally run "Predict.m" to test the results with the trained model. The final result is saved at "PredictedResult.mat".
+Finally run *"Predict.m"* to test the results with the trained model. The final result is saved at *"PredictedResult.mat"*.
 In this example we define the judgement of the valid as **{-0.5, 0.5}**. If the predicted output is greater than 0.5, we assign its predicted value as 1; if the predicted output is less than -0.5, we assign its value as 1. The correct predictions are the cases that the predicted values agree with their corresponding labels. 
 
-The accuracy is defined as the ratio of the total number of the correctly classified data over the total test data size. We also calculate the confusion matrix for each Test data. The results of the three Test data are saved in "Variable". 
-Judgement boundaries in "lower_bound" and "higher_bound" can be changed at the beginning of the code.
+The accuracy is defined as the ratio of the total number of the correctly classified data over the total test data size. We also calculate the confusion matrix for each Test data. The results of the three Test data are saved in *"Accuracy"*. 
+Judgement boundaries in *"lower_bound"* and *"higher_bound"* can be changed at the beginning of the code.
 
 In the example we set the uncertainty boundary of the prediction using the **"3-sigma"** to obtain the lower and higher boundaries.  
 To analysis the results, we obtain the four cases:   
@@ -37,11 +37,11 @@ The valid predictions and within the boundaries;
 The valid predictions but out of the boundaries;  
 The invalid predictions but within the boundaries;  
 The invalid predictions and out of the boundaries.  
-We collect these information of the three Test data in "Uncertainty".
+We collect these information of the three Test data in *"Uncertainty"*.
 
 In most prediction cases, the truth data is bounded in the "3-sigma" boundaries except in some cases.
 To look at those conditions the truth point is out of the boundaries, we account the index of the points in variables *"error_1"* and *"error_2"* for Test-1 with its higher boundary and lower boundary, *"error_3"* and *"error_4"* for the corresponding boundaries of Test-2, and *"error_5"* and *"error_6"* for Test-3. 
-We plot an example figure to show the zoom-in details, including the valid predictioin and the outof boundary condition in Test-3 and saved as "Test-3：ZoominResult.png".
+We plot an example figure to show the zoom-in details, including the valid predictioin and the outof boundary condition in Test-3 and saved as *"Test-3：ZoominResult.png"*.
 
 
 

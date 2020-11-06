@@ -5,6 +5,7 @@ The Gaussian Process toolbox based on MATLAB is the "gpml-3.1" by Carl Edward Ra
 
 The database is simulated by Orekit (https://www.orekit.org/) in Java. The code is accomplished by Dr. Hao Peng.   
 Some database with different maneuvers are saved in "DataCollectionFile-maneuver_database". The training and testing data are collected from here.
+The users can define and simulate new maneuver data in "OrekitSimulation/Java/src/main/java/co_paper_spaceops/Work_01_all_simulations.java".
 
 *"CollectData.m"*, *"BuildGP.m"* and *"Predict.m"* shall be kept in the **same folder** as *"DataCollectionFile"* in order to make the code run directly.   
 Users can also set their own data path and gpml path.

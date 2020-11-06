@@ -19,24 +19,27 @@ First run "CollectData.m" to pre-process the data. There are three test data in 
 In the example code, we define the training code is from orbit 1 to orbit 5 with maneuver magnitudes as 3/5/10 m/s.
 
 ### 2. Build the GP model
-After pre-processing the data, run "BuildGP.m" to training the model. The trained model and other informations are saved at "GP_model.mat".  
-Here we set the training step size as **10** in the example code for a quick training. If you want to have a higer accuracy, you can increase it.
+After pre-processing the data, run "BuildGP.m" to train the model. The trained model and other information is saved at "GP_model.mat".  
+Note the training step size as **10** in the example code for a quick training. For a higher accuracy, increase "trainingsteps".
 
 ### 3. Prediction Results
-Finally run "Predict.m" to predict the results with trained model. The final result is saved at "PredictedResult.mat".
-In this example we define the judgement of the valid as **{-0.5, 0.5}**. If the predicted output is greater than 0.5, we assign its predicted value as 1; if the predicted output is less than -0.5, we assign its value as 1. The correct predictions are the cases that the predicted values agree with their corresponding labels. Counting the total number of the correctly classified data the dividing by the total test data size, we calculate the accuracy and saved in "accuracy_test_i", i here is 1/2/3 for Test-1, Test-2 and Test-3.    
-You can also set your own judgement boundaries at the begining of the code.
+Finally run "Predict.m" to test the results with trained model. The final result is saved at "PredictedResult.mat".
+In this example we define the judgement of the valid as **{-0.5, 0.5}**. If the predicted output is greater than 0.5, we assign its predicted value as 1; if the predicted output is less than -0.5, we assign its value as 1. The correct predictions are the cases that the predicted values agree with their corresponding labels. 
 
-In the example we set the uncertainty boundary of the prediction follows the **"3-sigma"** theorem to obtain the lower and higher boundaries.  
-To analysis the results, we obtain the valid prediction with label -1 in variables *"test_i_pred_0_valid"*. Similarly, the valid prediction with label 1 are obtained in variables *"test_i_pred_1_valid"*.   
-We also account the number of the cases that is valid but out of the boundaries in variables *"test_i_pred_valid_outBoundary"* and the invalid case but out of the boundary in variables *"test_i_invalid_outBoundary"*.
+The accuracy is defined as the ratio of the total number of the correctly classified data over the total test data size. We also calculate the confusion matrix for each Test data. The results of the three Test data are saved in "Variable". 
+Judgement boundaries in "lower_bound" and "higher_bound" can be changed at the beginning of the code.
 
-We also calculate the confusion matrix for each Test data and saved in "test_i_PPV" (for positive predictive value), "test_i_FDR" (for false discovery rate), "test_i_FOR" (for false omission rate) and "test_i_NPV" (for negative predictive value).
+In the example we set the uncertainty boundary of the prediction using the **"3-sigma"** to obtain the lower and higher boundaries.  
+To analysis the results, we obtain the four cases:   
+The valid predictions and within the boundaries;  
+The valid predictions but out of the boundaries;  
+The invalid predictions but within the boundaries;  
+The invalid predictions but out of the boundaries.  
+We collect these information of the three Test data in "Uncertainty".
 
-In the example code, we plot the overall results of the Test data. You can zoom in for more details.  
-To look at those conditions the truth point is out of the boundaries, we account the the index of the points in variables *"error_1"* and *"error_2"* for Test-1 with its higher boundary and lower boundary, *"error_3"* and *"error_4"* for the corresponding boundaries of Test-2, and *"error_5"* and *"error_6"* for Test-3. You can refer this with the plot.     
-In the example code We plot an invalid prediction but out of the boundary in Test-3 and saved as "Test-3：InvalidPredictionbutoutofBoundary.png". 
-
+In most prediction cases, the truth data is bounded in the "3-sigma" boundaries except some point.
+To look at those conditions the truth point is out of the boundaries, we account the the index of the points in variables *"error_1"* and *"error_2"* for Test-1 with its higher boundary and lower boundary, *"error_3"* and *"error_4"* for the corresponding boundaries of Test-2, and *"error_5"* and *"error_6"* for Test-3. 
+We plot an example figure to show the zoom in datails including the valid predictioin and the outof boundary condition in Test-3 and saved as "Test-3：ZoominResult.png".
 
 
 

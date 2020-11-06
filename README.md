@@ -38,7 +38,7 @@ The invalid predictions but within the boundaries;
 The invalid predictions and out of the boundaries.  
 We collect these information of the three Test data in "Uncertainty".
 
-In most prediction cases, the truth data is bounded in the "3-sigma" boundaries except at some cases.
+In most prediction cases, the truth data is bounded in the "3-sigma" boundaries except in some cases.
 To look at those conditions the truth point is out of the boundaries, we account the index of the points in variables *"error_1"* and *"error_2"* for Test-1 with its higher boundary and lower boundary, *"error_3"* and *"error_4"* for the corresponding boundaries of Test-2, and *"error_5"* and *"error_6"* for Test-3. 
 We plot an example figure to show the zoom-in details, including the valid predictioin and the outof boundary condition in Test-3 and saved as "Test-3：ZoominResult.png".
 

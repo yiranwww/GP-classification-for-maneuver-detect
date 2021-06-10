@@ -18,7 +18,7 @@ CollectData_GP_classification_test07.m:  There are three test type.
 
 Similarly as  the low thrust maneuver files. 
 
-LowThrust_CollectData_GP_classification_07.m collect the hybrid data (impuslive and low thrust) it can also adjhust the sigma (standard deviation) of the noise. Though the data needs to be simulated firstly.
+LowThrust_CollectData_GP_classification_07.m collect the hybrid data (impuslive and low thrust) it can also adjhust the sigma (standard deviation) of the noise. Though the data needs to be simulated firstly. （前面都是过渡，直接运行这个文件就可以了）
 
 PCA and AE are used with the hybrid conditions. AE is written as python 3.7 with Keras. 
 

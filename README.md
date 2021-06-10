@@ -1,7 +1,9 @@
 # GP-classification-for-maneuver-dection
-### The code is for paper "Gaussian-Binary Classification for Resident Space Object Maneuver Detection".
+## The code is for paper "Gaussian-Binary Classification for Resident Space Object Maneuver Detection".
 
 The used databases (in folder DataBase) are all simulated by Orekit.
+### Before use, change the path accordingly. 
+
 
 ### To prepare the data for the model, run "CollectData" file. 
 CollectData_GP_classification_test01.m: The original section. Simple, and useless :)

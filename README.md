@@ -14,7 +14,7 @@ CollectData_GP_classification_test03.m:: There are two test data type.
 CollectData_GP_classification_test07.m:  There are three test type. 
                                           Test-1 is from the same orbit with same maneuvers as the training data. Test-2 is from different orbits but with same maneuvers. Test-3                                           is from total different database. 
 
-After collecting the data, run the "GP_classifcation_test". 
+### After collecting the data, run the "GP_classifcation_test". 
 
 Similarly as  the low thrust maneuver files. 
 
